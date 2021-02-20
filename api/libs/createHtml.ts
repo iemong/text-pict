@@ -19,6 +19,7 @@ export const createHtml = (option: Option) => {
                     font-size: 64px;
                     font-family: "Yusei Magic", "Roboto", sans-serif;
                     font-weight: bold;
+                    color: #555;
                   }
                   .flex {
                     display: flex;
@@ -26,6 +27,7 @@ export const createHtml = (option: Option) => {
                     align-items: center;
                     width: 100%;
                     height: 100%;
+                    box-sizing: border-box;
                   }
                 </style>
                 <link rel="preconnect" href="https://fonts.gstatic.com">
