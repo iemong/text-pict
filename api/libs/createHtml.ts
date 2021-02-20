@@ -9,8 +9,9 @@ export const createHtml = (option: Option) => {
             <head>
                 <meta charset="utf-8">
                 <title>Generated Image</title>
-                <link rel="preconnect" href="https://fonts.gstatic.com">
-                <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap" rel="stylesheet">
+                <style>
+                  @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap');
+                </style>
                 <style>
                   body {
                     margin: 0;
