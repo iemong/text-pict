@@ -8,7 +8,6 @@ export const createScreenShotFromHtml = async (
   width = 1200,
   height = 630
 ) => {
-
   const browser = await puppeteer.launch(
     isDev
       ? {
@@ -25,6 +24,6 @@ export const createScreenShotFromHtml = async (
   )
   const page = await browser.newPage()
   await page.setViewport({ width, height })
-  await page.setContent(html)
+  await page.setContent(html, { waitUntil: "load" })
   return await page.screenshot({ type: "jpeg" })
 }
