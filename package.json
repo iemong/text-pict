@@ -1,15 +1,26 @@
 {
   "name": "dynamic-ogp",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/index.ts",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "vercel dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iemong/dynamic-ogp.git"
+  },
+  "author": "iemong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iemong/dynamic-ogp/issues"
+  },
+  "homepage": "https://github.com/iemong/dynamic-ogp#readme",
+  "devDependencies": {
+    "@vercel/node": "^1.9.0",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "puppeteer": "^7.1.0"
   }
 }
