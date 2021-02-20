@@ -17,7 +17,7 @@ export const createHtml = (option: Option) => {
                     border: 40px solid #6ddccf;
                     box-sizing: border-box;
                     font-size: 64px;
-                    font-family: "YuseiMagic-Regular", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+                    font-family: "Yusei Magic", "Roboto", sans-serif;
                     font-weight: bold;
                   }
                   .flex {
@@ -28,6 +28,9 @@ export const createHtml = (option: Option) => {
                     height: 100%;
                   }
                 </style>
+                <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap" rel="stylesheet">
+
             </head>
             <body>
               <div class="flex">

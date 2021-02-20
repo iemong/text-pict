@@ -1,6 +1,5 @@
 import puppeteer from "puppeteer-core"
 import chrome from "chrome-aws-lambda"
-import * as path from "path"
 
 const isDev = !process.env.AWS_REGION
 
@@ -9,7 +8,6 @@ export const createScreenShotFromHtml = async (
   width = 1200,
   height = 630
 ) => {
-  await chrome.font(path.resolve("./fonts/YuseiMagic-Regular.ttf"))
 
   const browser = await puppeteer.launch(
     isDev
