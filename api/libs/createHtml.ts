@@ -1,3 +1,5 @@
+import sanitizeHtml from 'sanitize-html';
+
 type Option = {
   text: string
 }
@@ -37,7 +39,7 @@ export const createHtml = (option: Option) => {
             </head>
             <body>
               <div class="flex">
-                ${text}
+                ${sanitizeHtml(text)}
               </div>
             </body> 
         </html>
