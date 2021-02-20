@@ -7,6 +7,7 @@ export const createHtml = (option: Option) => {
   return `
         <html lang="ja">
             <head>
+                <meta charset="utf-8">
                 <title>Generated Image</title>
                 <style>
                   body {
