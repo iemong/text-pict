@@ -5,7 +5,7 @@ type Option = {
 export const createHtml = (option: Option) => {
   const { text } = option
   return `
-        <html>
+        <html lang="ja">
             <head>
                 <title>Generated Image</title>
                 <style>
