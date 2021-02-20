@@ -17,7 +17,7 @@ export const createHtml = (option: Option) => {
                     border: 40px solid #6ddccf;
                     box-sizing: border-box;
                     font-size: 64px;
-                    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+                    font-family: "YuseiMagic-Regular", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
                     font-weight: bold;
                   }
                   .flex {
