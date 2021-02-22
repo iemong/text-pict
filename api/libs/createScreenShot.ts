@@ -28,5 +28,5 @@ export const createScreenShotFromHtml = async (
   const page = await browser.newPage()
   await page.setViewport({ width, height })
   await page.setContent(html, { waitUntil: "load" })
-  return await page.screenshot({ type: "jpeg" })
+  return page.screenshot({ type: "jpeg" })
 }
