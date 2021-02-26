@@ -1,4 +1,4 @@
-import sanitizeHtml from 'sanitize-html';
+import sanitizeHtml from "sanitize-html"
 
 type Option = {
   text: string
@@ -12,7 +12,7 @@ export const createHtml = (option: Option) => {
                 <meta charset="utf-8">
                 <title>Generated Image</title>
                 <style>
-                  @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
                 </style>
                 <style>
                   body {
