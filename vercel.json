@@ -4,5 +4,5 @@
       "memory": 1024
     }
   },
-  "rewrites": [{ "source": "/(.+)", "destination": "/api" }]
+  "rewrites": [{ "source": "/:text", "destination": "/api" }]
 }
