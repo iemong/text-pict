@@ -2,10 +2,17 @@ import sanitizeHtml from "sanitize-html"
 
 type Option = {
   text: string
+  width: number
 }
 
 export const createHtml = (option: Option) => {
-  const { text } = option
+  const { text, width } = option
+
+  const calcVW = (size:number) => `${size / width * 100}vw`
+  const fontSize = calcVW(64)
+  const borderSize = calcVW(40)
+  const paddingSize = calcVW(50)
+
   return `
         <html lang="ja">
             <head>
@@ -19,9 +26,9 @@ export const createHtml = (option: Option) => {
                     margin: 0;
                     padding: 0;
                     background: #ffefa1;
-                    border: 40px solid #6ddccf;
+                    border: ${borderSize} solid #6ddccf;
                     box-sizing: border-box;
-                    font-size: 64px;
+                    font-size: ${fontSize};
                     font-family: "Yusei Magic", "Roboto", sans-serif;
                     font-weight: bold;
                     color: #555;
@@ -32,7 +39,7 @@ export const createHtml = (option: Option) => {
                     align-items: center;
                     width: 100%;
                     height: 100%;
-                    padding: 50px;
+                    padding: ${paddingSize};
                     box-sizing: border-box;
                   }
                 </style>

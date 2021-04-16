@@ -6,11 +6,11 @@ export default async (req: NowRequest, res: NowResponse) => {
   const { text = "ここにテキストが入ります", w = "1200", h = "630" } = req.query
 
   try {
-    const joinedText = Array.isArray(text) ? text.join("") : text
-    const templateHtml = createHtml({ text: joinedText })
-
     const width = Number.parseInt(Array.isArray(w) ? w[0] : w, 10)
     const height = Number.parseInt(Array.isArray(h) ? h[0] : h, 10)
+
+    const joinedText = Array.isArray(text) ? text.join("") : text
+    const templateHtml = createHtml({ text: joinedText, width })
     const file = await createScreenShotFromHtml(templateHtml, width, height)
 
     res.statusCode = 200
