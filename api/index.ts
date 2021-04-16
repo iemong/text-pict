@@ -3,14 +3,15 @@ import { createHtml } from "./libs/createHtml"
 import { createScreenShotFromHtml } from "./libs/createScreenShot"
 
 export default async (req: NowRequest, res: NowResponse) => {
-  const { text = "ここにテキストが入ります", w = "1200", h = "630" } = req.query
+  const { text = "ここにテキストが入ります", w = "1200", h = "630", f = "64" } = req.query
 
   try {
     const width = Number.parseInt(Array.isArray(w) ? w[0] : w, 10)
     const height = Number.parseInt(Array.isArray(h) ? h[0] : h, 10)
+    const fontSize = Number.parseInt(Array.isArray(f) ? f[0] : f, 10)
 
     const joinedText = Array.isArray(text) ? text.join("") : text
-    const templateHtml = createHtml({ text: joinedText, width })
+    const templateHtml = createHtml({ text: joinedText, width, fontSize })
     const file = await createScreenShotFromHtml(templateHtml, width, height)
 
     res.statusCode = 200

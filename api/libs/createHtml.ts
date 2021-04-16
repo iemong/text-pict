@@ -3,13 +3,14 @@ import sanitizeHtml from "sanitize-html"
 type Option = {
   text: string
   width: number
+  fontSize: number
 }
 
 export const createHtml = (option: Option) => {
-  const { text, width } = option
+  const { text, width, fontSize } = option
 
   const calcVW = (size:number) => `${size / width * 100}vw`
-  const fontSize = calcVW(64)
+  const actualFontSize = calcVW(fontSize)
   const borderSize = calcVW(40)
   const paddingSize = calcVW(50)
 
@@ -28,7 +29,7 @@ export const createHtml = (option: Option) => {
                     background: #ffefa1;
                     border: ${borderSize} solid #6ddccf;
                     box-sizing: border-box;
-                    font-size: ${fontSize};
+                    font-size: ${actualFontSize};
                     font-family: "Yusei Magic", "Roboto", sans-serif;
                     font-weight: bold;
                     color: #555;
