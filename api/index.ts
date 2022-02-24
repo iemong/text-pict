@@ -27,6 +27,7 @@ export default async (req: NowRequest, res: NowResponse) => {
       "Cache-Control",
       "public, immutable, no-transform, s-maxage=31536000, max-age=31536000"
     )
+    res.setHeader("Access-Control-Allow-Origin", "*")
     res.end(file)
   } catch (e) {
     res.statusCode = 500
