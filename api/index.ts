@@ -18,6 +18,8 @@ export default async (req: NowRequest, res: NowResponse) => {
     res.statusCode = 200
     res.setHeader("Access-Control-Allow-Origin", "*")
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS')
+    res.setHeader('Timing-Allow-Origin', '*')
+    res.setHeader('Content-Disposition', `inline;filename="${encodeURI(text instanceof Array ? text.join(''): text)}.jpg"`)
 
     if (req.method === 'OPTIONS') {
         res.status(200).end()
