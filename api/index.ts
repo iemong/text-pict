@@ -14,7 +14,15 @@ export default async (req: NowRequest, res: NowResponse) => {
     const templateHtml = createHtml({ text: joinedText, width, fontSize })
     const file = await createScreenShotFromHtml(templateHtml, width, height)
 
+    res.setHeader('Access-Control-Allow-Credentials', 'true')
     res.statusCode = 200
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS')
+
+    if (req.method === 'OPTIONS') {
+        res.status(200).end()
+        return
+    }
     res.setHeader("Content-Type", "image/jpeg")
     /* Cache-Controlの内訳(MDNより[https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Cache-Control])
      * public: レスポンスが通常はキャッシュ可能でなくても、レスポンスをどのキャッシュにも格納することができます。
@@ -27,7 +35,6 @@ export default async (req: NowRequest, res: NowResponse) => {
       "Cache-Control",
       "public, immutable, no-transform, s-maxage=31536000, max-age=31536000"
     )
-    res.setHeader("Access-Control-Allow-Origin", "*")
     res.end(file)
   } catch (e) {
     res.statusCode = 500
