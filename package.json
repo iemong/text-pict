@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "chrome-aws-lambda": "7.0.0",
+    "picocolors": "^1.0.0",
     "puppeteer-core": "7.0.0"
   }
 }
