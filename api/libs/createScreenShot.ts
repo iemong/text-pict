@@ -17,7 +17,7 @@ export const createScreenShotFromHtml = async (
   )
 
   await chrome.font(
-    "https://raw.githack.com/googlei18n/noto-cjk/master/NotoSansCJKhk-Regular.otf"
+    "https://rawcdn.githack.com/googlefonts/noto-cjk/b4f6497749235331fdbfe349ae0c581185f5c28f/Sans/Variable/TTF/NotoSansCJKjp-VF.ttf"
   )
 
   const browser = await puppeteer.launch(
