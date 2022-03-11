@@ -24,6 +24,7 @@ export const ticketGeneratorHtml = ({
                     box-sizing: border-box;
                     font-size: ${actualFontSize};
                     font-family: "Open Sans", sans-serif;
+                    font-weight: bold;
                     color: #111;
                   }
                   .flex {
