@@ -13,7 +13,7 @@ export const ticketGeneratorHtml = ({
                 <meta charset="utf-8">
                 <title>Generated Image</title>
                 <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
                 </style>
                 <style>
                   body {
@@ -23,7 +23,7 @@ export const ticketGeneratorHtml = ({
                     border: ${borderSize} solid #111;
                     box-sizing: border-box;
                     font-size: ${actualFontSize};
-                    font-family: "Open Sans", sans-serif;
+                    font-family: "Yusei Magic", "Roboto", sans-serif;
                     color: #111;
                   }
                   .flex {
